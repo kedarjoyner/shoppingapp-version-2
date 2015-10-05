@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$(".submit-button").click(function(event) {
 		//alert('test!');
 		var input = $(".input-box").val(); //grabs value of current item user inputs //why some of paranthenses and others not?
-		var icons = '<span class="icons"><i class="fa fa-square-o"><i class="fa fa-check-square-o"></i></i><i class="fa fa-minus-circle"></i></span>';	
+		var icons = '<span class="icons"><i class="fa fa-square-o"></i><i class="fa fa-check-square-o"></i><i class="fa fa-minus-circle"></i></span>';	
 		event.preventDefault(); // prevents page reload after submission. Why does this happen? Why do I need "event"?
 		$(".list-items").prepend("<li>" + input + icons + "</li>");
 		$(".input-box").val(''); //removes text within input box
@@ -16,13 +16,14 @@ $(document).ready(function() {
 
 	$('.list-items').on('click', '.fa-square-o', function() { //click on square chance to checked
 		//alert("test!");
-		$(this).hide().show('.fa-check-square-o');
+		$(this).hide()
+		$('.fa-check-square-o').show();
 	});
+
 
 });
 
 
-//var trash = $('.fa-minus-circle');
 
 
 
