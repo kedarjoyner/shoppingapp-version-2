@@ -8,18 +8,22 @@ $(document).ready(function() {
 		$(".list-items").prepend("<li>" + input + icons + "</li>");
 		$(".input-box").val(''); //removes text within input box
 	});
+    $('.list-items').on('click', '.fa-minus-circle', function() { //why can't this be $(trash).click.etc...?
+        $(this).closest('li').remove();
 
-	$('.list-items').on('click', '.fa-minus-circle', function() { //why can't this be $(trash).click.etc...?
-		$(this).closest('li').remove();
+    });
 
-	});
+    $('.list-items').on('click', '.fa-square-o', function() { //click on square and change to checked
+        //alert("test!");
+        $(this).toggleClass('fa-check-square-o fa-square-o');
+    });
 
-	$('.list-items').on('click', '.fa-square-o', function() { //click on square and change to checked
-		//alert("test!");
-		$(this).hide().next('.fa-check-square-o').show();
-	});
+    $('.list-items').on('click', '.fa-check-square-o', function() { //click on check and change back to unchecked
+        $(this).toggleClass('fa-check-square-o fa-square-o');
+    });
 
 });
+
 
 
 
