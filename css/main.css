@@ -89,7 +89,7 @@ ul > li:nth-of-type(2n) {
 }
 
 .fa-check-square-o {
-	display: none;
+	/*display: none;*/
 }
 
 
