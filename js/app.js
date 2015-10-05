@@ -9,8 +9,8 @@ $(document).ready(function() {
 			alert("Oops! You forgot to enter an item.");
 		}
 			else { //submit
-			$(".list-items").prepend("<li>" + input + icons + "</li>");
-			$(".input-box").val(''); //removes text within input box
+				$(".list-items").prepend("<li>" + input + icons + "</li>");
+				$(".input-box").val(''); //removes text within input box
 			}	
 	});
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
     $('.list-items').on('click', '.fa-square-o', function() { //click on square and change to checked
         //alert("test!");
         $(this).toggleClass('fa-check-square-o fa-square-o');
-         $(this).closest('li').css('opacity', 0.2).css('background-color', '#f37370').css('text-decoration', 'line-through').appendTo('ul');
+         $(this).closest('li').css('opacity', 0.2).css('background-color', '#cd5b45').css('text-decoration', 'line-through').appendTo('ul');
     });
 
     $('.list-items').on('click', '.fa-check-square-o', function() { //click on check and change back to unchecked
@@ -30,7 +30,6 @@ $(document).ready(function() {
         $(this).closest('li').css('opacity', "").css('background-color', "").css('text-decoration', 'none').prependTo('ul');
 
     });    
-
 });
 
 

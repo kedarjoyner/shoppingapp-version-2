@@ -19,6 +19,7 @@ body {
 
 .app-title {
 	font-size: 2.5em;
+	font-weight: 600;
 	text-transform: uppercase;
 	text-align: center;
 	margin-top: 30px;
@@ -47,7 +48,7 @@ body {
 	width: 100px;
 	padding: 20px;
 	margin-left: 10px;
-	background-color: #007c7c;
+	background-color: #cd5b45;
 	border: 0;
 }
 
@@ -86,6 +87,13 @@ ul > li:nth-of-type(2n) {
 
 .icons > i {
 	margin-left: 10px;
+}
+
+/* LINKS */
+
+button:hover {
+	text-decoration: none;
+	background: #007c7c;
 }
 
 
