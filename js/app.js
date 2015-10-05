@@ -16,25 +16,15 @@ $(document).ready(function() {
     $('.list-items').on('click', '.fa-square-o', function() { //click on square and change to checked
         //alert("test!");
         $(this).toggleClass('fa-check-square-o fa-square-o');
+         $(this).closest('li').css('opacity', 0.2).css('background-color', '#f37370').css('text-decoration', 'line-through').appendTo('ul');
     });
 
     $('.list-items').on('click', '.fa-check-square-o', function() { //click on check and change back to unchecked
         $(this).toggleClass('fa-check-square-o fa-square-o');
+
     });
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
