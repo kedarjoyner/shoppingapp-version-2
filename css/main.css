@@ -1,0 +1,96 @@
+html {
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+		box-sizing: inherit;
+}
+
+body {
+	background-color: #23B6B6;
+	font-family: 'Open Sans', sans-serif;
+	color: #FFF;
+}
+
+/** {
+	border: 1px solid black;
+}*/
+
+.app-title {
+	font-size: 2.5em;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 30px;
+}
+
+/* INPUT */
+
+.form-wrap {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.input-box {
+	font-size: 1em;
+	width: 400px;
+	padding: 20px;
+	border: none;
+	color: black;
+}
+
+.submit-button {
+	font-size: 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+	width: 100px;
+	padding: 20px;
+	margin-left: 10px;
+	background-color: #007c7c;
+	border: 0;
+}
+
+/* LIST ITEMS */
+
+ul.list-items {
+	padding-left: 0;
+}
+
+.list-wrap {
+	margin: 0 auto;
+	width: 515px;
+	margin-top: 30px;
+}
+
+.list-items {
+	font-size: 1.3em;
+	font-weight: 700;
+	list-style: none;
+	line-height: 50px;
+	background-color: #70dada;
+}
+
+ul > li {
+	padding: 10px 20px;
+}
+
+
+ul > li:nth-of-type(2n) {
+  background-color: #007c7c;
+}
+
+.icons {
+	float: right;
+}
+
+.icons > i {
+	margin-left: 10px;
+}
+
+.fa-check-square-o {
+	display: none;
+}
+
+
+
