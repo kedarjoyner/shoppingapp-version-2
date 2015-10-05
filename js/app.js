@@ -19,10 +19,6 @@ $(document).ready(function() {
 		$(this).hide().next('.fa-check-square-o').show();
 	});
 
-	$('.list-items').on('click', '.fa-check-square-o', function() { //click on check and change back to unchecked
-		$(this).hide().next('.fa-square-o').show();
-	});
-
 });
 
 
