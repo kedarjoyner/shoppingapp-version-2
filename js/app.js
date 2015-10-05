@@ -21,6 +21,7 @@ $(document).ready(function() {
 
     $('.list-items').on('click', '.fa-check-square-o', function() { //click on check and change back to unchecked
         $(this).toggleClass('fa-check-square-o fa-square-o');
+        $(this).closest('li').css('opacity', "").css('background-color', "").css('text-decoration', 'none').prependTo('ul');
 
     });
 
