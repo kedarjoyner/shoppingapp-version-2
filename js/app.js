@@ -16,8 +16,8 @@ $(document).ready(function() {
 
 	$('.list-items').on('click', '.fa-square-o', function() { //click on square chance to checked
 		//alert("test!");
-		$(this).hide()
-		$('.fa-check-square-o').show();
+		$(this).hide().next('.fa-check-square-o').show();
+
 	});
 
 
