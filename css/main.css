@@ -96,4 +96,14 @@ button:hover {
 	background: #007c7c;
 }
 
+/* RESPONSIVE DESIGN */
 
+@media only screen and (max-width: 515px) {
+	.input-box {
+		width: 250px;
+	}
+
+	.list-wrap {
+		width: 365px;
+	}
+}
