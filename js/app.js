@@ -1,4 +1,19 @@
+$(function() {
+    $( ".list-items" ).sortable();
+    $( ".list-items" ).disableSelection();
+  });
+
+function updateParagraph() { 
+	var itemCount = $('ul.list-items li').length;
+	$(".update-paragraph").text("You have " + itemCount + " items left.");
+		if (itemCount === 1) {
+			$(".update-paragraph").text("You have " + itemCount + " item left.");
+		}
+}
+
 $(document).ready(function() {
+
+	updateParagraph();
 
 	$(".submit-button").click(function(event) {
 		//alert('test!');
@@ -11,18 +26,20 @@ $(document).ready(function() {
 			else { //submit
 				$(".list-items").prepend("<li>" + input + icons + "</li>");
 				$(".input-box").val(''); //removes text within input box
+				updateParagraph();
 			}	
 	});
 
     $('.list-items').on('click', '.fa-minus-circle', function() { //why can't this be $(trash).click.etc...?
         $(this).closest('li').remove();
-
+        updateParagraph();
     });
 
+
     $('.list-items').on('click', '.fa-square-o', function() { //click on square and change to checked
-        //alert("test!");
-        $(this).toggleClass('fa-check-square-o fa-square-o');
-         $(this).closest('li').css('opacity', 0.2).css('background-color', '#cd5b45').css('text-decoration', 'line-through').appendTo('ul');
+        $(this).toggleClass('fa-check-square-o fa-square-o'); 
+        	$(this).closest('li').css('opacity', 0.2).css('background-color', '#cd5b45').css('text-decoration', 'line-through').appendTo('ul');
+        		
     });
 
     $('.list-items').on('click', '.fa-check-square-o', function() { //click on check and change back to unchecked
@@ -31,8 +48,6 @@ $(document).ready(function() {
 
     });    
 });
-
-
 
 /*var userName = prompt("Welcome! What's your name?");
 var greeting = "Welcome, " + userName + "!";

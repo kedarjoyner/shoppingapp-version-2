@@ -89,6 +89,13 @@ ul > li:nth-of-type(2n) {
 	margin-left: 10px;
 }
 
+/* ITEMS COUNTER */
+
+.update-paragraph {
+	text-align: center;
+	font-size: 1.5xem;
+}x
+
 /* LINKS */
 
 button:hover {
@@ -106,4 +113,5 @@ button:hover {
 	.list-wrap {
 		width: 365px;
 	}
+
 }
