@@ -54,8 +54,10 @@ body {
 
 /* LIST ITEMS */
 
+
 ul.list-items {
 	padding-left: 0;
+
 }
 
 .list-wrap {
@@ -81,11 +83,11 @@ ul > li:nth-of-type(2n) {
   background-color: #007c7c;
 }
 
-.icons {
+span.icons {
 	float: right;
 }
 
-.icons > i {
+span.icons > i {
 	margin-left: 10px;
 }
 
@@ -93,8 +95,8 @@ ul > li:nth-of-type(2n) {
 
 .update-paragraph {
 	text-align: center;
-	font-size: 1.5xem;
-}x
+	font-size: 1.3em;
+}
 
 /* LINKS */
 
