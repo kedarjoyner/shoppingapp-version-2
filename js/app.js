@@ -5,18 +5,19 @@ $(function() {
   });
 
 function updateParagraph() {
- 	var itemCount = $('ul.list-items li').length;
+ 	var itemCount = $('ul.list-items li').length - $('.fa-check-square-o').length;
 	$(".update-paragraph").text("You have " + itemCount + " items left.");
 		if (itemCount === 1) {
 			$(".update-paragraph").text("You have " + itemCount + " item left.");
 		}
-			else if (itemCount === '.fa-check-square-o') {
-				itemCount--;
-			}
-}
+// 			else if (itemCount === '.fa-check-square-o') {
+// 				itemCount--;
+// 			}
+ }
 
 $(document).ready(function() {
 
+	var count
 	updateParagraph();
 
 	$(".submit-button").click(function(event) {
@@ -43,11 +44,13 @@ $(document).ready(function() {
     $('.list-items').on('click', '.fa-square-o', function() { //click on square and change to checked
         $(this).toggleClass('fa-check-square-o fa-square-o'); 
         	$(this).closest('li').css('opacity', 0.2).css('background-color', '#cd5b45').css('text-decoration', 'line-through').appendTo('ul');
+        	updateParagraph();
     });
 
     $('.list-items').on('click', '.fa-check-square-o', function() { //click on check and change back to unchecked
         $(this).toggleClass('fa-check-square-o fa-square-o');
         	$(this).closest('li').css('opacity', "").css('background-color', "").css('text-decoration', 'none').prependTo('ul');
+        	updateParagraph();
 
     });    
 });
